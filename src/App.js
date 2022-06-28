@@ -13,9 +13,9 @@ function App() {
      <BrowserRouter>
         
        <Switch>
-         <Route exact path="/login" component={Login} />
+         <Route path="/login" component={Login} />
          <Route exact path="/" component={Home}/>
-         <Route exact path="/company/:id" component={CompanyDetails} />
+         <Route  path="/company/:id" component={CompanyDetails} />
          {/* <Redirect exact path="/company" component={Home} /> */}
       </Switch>
     </BrowserRouter>
