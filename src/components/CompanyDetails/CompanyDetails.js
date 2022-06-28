@@ -27,6 +27,22 @@ class CompanyDetails extends React.Component {
         
     }
 
+    componentDidUpdate(_PrevProps, prevState) {
+      const prevList = prevState.selectedcompany
+      const currentList = this.state.selectedcompany
+        if ( prevList !== currentList ) {
+            axios
+        .get(`http://localhost:8020/company/${this.props.match.params.id}`)
+        
+        .then((response) => 
+      
+        this.setState({
+          selectedcompany: response.data,
+          }));
+        }
+        
+    }
+
 render() {
     
     return (
