@@ -1,11 +1,16 @@
 import React from 'react'
 import "./Pixel.scss";
-const Pixel = ({arry, companyDetails}) => {
-    console.log(companyDetails)
-    console.log(arry)
+import { Link } from 'react-router-dom';
+const Pixel = ({arry}) => {
   
-    return (
-    <div className='pixel' style={{background: `${arry.color}`}}>{arry.text}</div>
+const handleClick = event => {
+  console.log(event.target)
+}
+  
+  return (
+    <Link to={`/company/${arry.charityid}`} onClick={handleClick}>
+      <div className='pixel' id={arry.charityid} style={{background: `${arry.color}`}}>{arry.text} </div>
+    </Link>
   )
 }
 
