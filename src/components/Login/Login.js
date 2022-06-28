@@ -1,11 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
+import axios from 'axios';
+
+
+axios
+      .get(`http://localhost:8020/company/login`)
+      .then(data => data.json())
 
 export default function Login({ setToken }) {
     const [username, setUserName] = useState();
     const [password, setPassword] = useState();
+
+    const handleSubmit = async e => {
+        e.preventDefault();
+        const token = await Login({
+          username,
+          password
+        });
+        setToken(token);
+      }
+
     return(
-    <form>
+    <form onSubmit={handleSubmit}>
       <label>
         <p>Username</p>
         <input type="text" onChange={e => setUserName(e.target.value)}/>
@@ -15,7 +32,7 @@ export default function Login({ setToken }) {
         <input type="password"  onChange={e => setPassword(e.target.value)}/>
       </label>
       <div>
-        <button type="submit">Submit</button>
+        <button  type="submit">Submit</button>
       </div>
     </form>
   )
