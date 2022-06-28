@@ -3,6 +3,10 @@ import React from "react";
 import axios from "axios";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import EditPixel from "../components/EditPixel/EditPixel";
+import CompanyDetails from "../components/CompanyDetails/CompanyDetails";
+import EditCompany from "../components/EditCompany/EditCompany";
+import "./Home.scss"
+
 
 
 const Home = () => {
@@ -11,7 +15,10 @@ const Home = () => {
         <>
        
             <Board />
+            <div className="flex">
             <EditPixel />
+            <EditCompany />
+           </div>
 
            
            

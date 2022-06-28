@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import "./EditPixel.scss";
+import "./EditCompany.scss";
 import axios from "axios";
 
-class EditPixel extends Component {
+class EditCompany extends Component {
   state = {
-    id: "",
-    color: "",
-    text: "", 
+    name: "",
+    url: "",
+    fundingGoal: "", 
     charityid: "",
+    raisedMoney: "",
   };
 
   handleChange = (e) => {
@@ -19,26 +20,28 @@ class EditPixel extends Component {
   submitForm = (e) => {
     e.preventDefault();
     console.log(this.state.charityid);
-      const newPixel = {
-        id: this.state.id,
-        color: this.state.color,
-        text: this.state.text,
+      const newCompany = {
+        name: this.state.name,
+        url: this.state.url,
+        fundingGoal: this.state.fundingGoal, 
         charityid: this.state.charityid,
+        raisedMoney: this.state.raisedMoney,
       };
 
       axios
         // update information to backend
         .put(
-          `http://localhost:8020/pixel/edit`,
-          newPixel
+          `http://localhost:8020/company/edit`,
+          newCompany
         )
         .then((response) =>
           //reset state
           this.setState({
-            id: this.state.id,
-            color: this.state.color,
-            text: this.state.text,
+            name: this.state.name,
+            url: this.state.url,
+            fundingGoal: this.state.fundingGoal, 
             charityid: this.state.charityid,
+            raisedMoney: this.state.raisedMoney,
           })
         )
         .then((response) => {
@@ -50,7 +53,7 @@ class EditPixel extends Component {
         return (
             <form className="card" onSubmit={this.submitForm}>
             <div className="card__title">
-              <h1 className="card__title-text">Edit Pixel</h1>
+              <h1 className="card__title-text">Edit Company</h1>
             </div>
             <div className="card__forms">
               <div className="pixel">
@@ -60,37 +63,47 @@ class EditPixel extends Component {
                   <input
                     type="text"
                     placeholder="Company Name"
-                    name="text"
+                    name="name"
                     onChange={this.handleChange}
                     
                   /> 
                 </label>
                 <label className="pixel__input-label label">
-                  Color of Pixel
+                  Link to Website
                   <input
                     type="text"
-                    placeholder="Color of Pixel"
-                    name="color"
+                    placeholder="Url"
+                    name="url"
                     onChange={this.handleChange}
                     
                   />
                 </label>
                 <label className="pixel__input-label label">
-                  Charity id 
+                  Funding Goal 
                   <input
                     type="text"
-                    placeholder="Charity Id"
+                    placeholder="Funding Goals"
+                    name="fundingGoal"
+                    onChange={this.handleChange}
+                    
+                  />
+                </label>
+                <label className="pixel__input-label label">
+                  Charity Id
+                  <input
+                    type="text"
+                    placeholder="charityid"
                     name="charityid"
                     onChange={this.handleChange}
-                    
+                
                   />
                 </label>
                 <label className="pixel__input-label label">
-                  Id
+                  Raised Money
                   <input
                     type="text"
-                    placeholder="id"
-                    name="id"
+                    placeholder="Raised Money"
+                    name="raisedMoney"
                     onChange={this.handleChange}
                 
                   />
@@ -109,10 +122,4 @@ class EditPixel extends Component {
 
   };
 
-  export default EditPixel;
-
-
-
-    
-
-
+  export default EditCompany;
