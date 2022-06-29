@@ -22,9 +22,7 @@ class CompanyDetails extends React.Component {
       this.setState({
         selectedcompany: response.data,
         })
-        
          );
-        
     }
 
     componentDidUpdate(_PrevProps, prevState) {

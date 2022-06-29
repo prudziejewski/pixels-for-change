@@ -9,7 +9,7 @@ const handleClick = (event) => {
 }
   
   return (
-    <Link to={`/company/${arry.charityid}`} onClick={handleClick}>
+    <Link className="pixel__link" to={`/company/${arry.charityid}`} onClick={handleClick}>
       <div className='pixel' id={arry.charityid} style={{background: `${arry.color}`}}>{arry.text} </div>
     </Link>
   )
