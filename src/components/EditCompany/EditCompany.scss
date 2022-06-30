@@ -1,0 +1,46 @@
+
+
+.edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__buttons {
+        margin: 1rem;
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+
+        &--cancel {
+            border-radius: 0.25rem;
+            border: 2px solid red;
+            width: 6rem;
+            height: 2.5rem;
+        }
+
+        &--add {
+            border-radius: 0.25rem;
+            border: 2px solid green;
+            width: 6rem;
+            height: 2.5rem;
+        }
+    }
+
+    &__input {
+        margin-top: 0.5rem;
+    }
+}
+
+
+.card {
+    
+    &__title {
+        text-align: center;
+    }
+}
+
+.label {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
