@@ -53,14 +53,15 @@ class EditCompany extends Component {
         return (
             <form className="card" onSubmit={this.submitForm}>
             <div className="card__title">
-              <h1 className="card__title-text">Edit Company</h1>
+              <h1 className="card__title-text">Register Your Company</h1>
             </div>
             <div className="card__forms">
-              <div className="pixel">
-                <h2 className="pixel__title">Company Details</h2>
-                <label className="pixel__input-label label">
-                    Company Name
+              <div className="edit">
+                <h2 className="edit__title">Company Details</h2>
+                <label className="edit__input-label label">
+                    Your Company Name
                   <input
+                    className="edit__input"
                     type="text"
                     placeholder="Company Name"
                     name="name"
@@ -68,9 +69,10 @@ class EditCompany extends Component {
                     
                   /> 
                 </label>
-                <label className="pixel__input-label label">
-                  Link to Website
+                <label className="edit__input-label label">
+                  Link to Your Website
                   <input
+                    className="edit__input"
                     type="text"
                     placeholder="Url"
                     name="url"
@@ -78,9 +80,10 @@ class EditCompany extends Component {
                     
                   />
                 </label>
-                <label className="pixel__input-label label">
-                  Funding Goal 
+                <label className="edit__input-label label">
+                 What is your Funding Goal 
                   <input
+                    className="edit__input"
                     type="text"
                     placeholder="Funding Goals"
                     name="fundingGoal"
@@ -88,9 +91,10 @@ class EditCompany extends Component {
                     
                   />
                 </label>
-                <label className="pixel__input-label label">
+                <label className="edit__input-label label">
                   Charity Id
                   <input
+                    className="edit__input"
                     type="text"
                     placeholder="charityid"
                     name="charityid"
@@ -98,9 +102,10 @@ class EditCompany extends Component {
                 
                   />
                 </label>
-                <label className="pixel__input-label label">
-                  Raised Money
+                <label className="dit__input-label label">
+                  How much money have you Raised Money
                   <input
+                    className="edit__input"
                     type="text"
                     placeholder="Raised Money"
                     name="raisedMoney"
@@ -108,14 +113,16 @@ class EditCompany extends Component {
                 
                   />
                 </label>
-              </div>
-            </div>
-            <div className="card__buttons">
-              <button type="button" className="button card__buttons--cancel">
+              <div className="edit__buttons">
+              <button type="button" className="button edit__buttons--cancel">
                 Cancel
               </button>
-              <button className="button card__buttons--add">+ Save</button>
+              <button className="button edit__buttons--add">+ Save</button>
             </div>
+              
+              </div>
+            </div>
+            
           </form>
         )
     }

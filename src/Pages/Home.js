@@ -13,15 +13,7 @@ const Home = () => {
  
         return (
         <>
-       
             <Board />
-            <div className="flex">
-            <EditPixel />
-            <EditCompany />
-           </div>
-
-           
-           
         </>
       
       );

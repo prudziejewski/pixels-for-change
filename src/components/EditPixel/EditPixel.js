@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./EditPixel.scss";
 import axios from "axios";
+import location from "../../Assets/images/pixel-location.jpg"
 
 class EditPixel extends Component {
   state = {
@@ -53,11 +54,12 @@ class EditPixel extends Component {
               <h1 className="card__title-text">Edit Pixel</h1>
             </div>
             <div className="card__forms">
-              <div className="pixel">
-                <h2 className="pixel__title">Company Details</h2>
-                <label className="pixel__input-label label">
+              <div className="buy">
+                <h2 className="buy__title">Company Details</h2>
+                <label className="buy__input-label label">
                     Company Name
                   <input
+                    className="buy__input"
                     type="text"
                     placeholder="Company Name"
                     name="text"
@@ -65,9 +67,10 @@ class EditPixel extends Component {
                     
                   /> 
                 </label>
-                <label className="pixel__input-label label">
+                <label className="buy__input-label label">
                   Color of Pixel
                   <input
+                    className="buy__input"
                     type="text"
                     placeholder="Color of Pixel"
                     name="color"
@@ -75,9 +78,10 @@ class EditPixel extends Component {
                     
                   />
                 </label>
-                <label className="pixel__input-label label">
+                <label className="buy__input-label label">
                   Charity id 
                   <input
+                    className="buy__input"
                     type="text"
                     placeholder="Charity Id"
                     name="charityid"
@@ -85,24 +89,27 @@ class EditPixel extends Component {
                     
                   />
                 </label>
-                <label className="pixel__input-label label">
-                  Id
+                <label className="buy__input-label label buy__input--center">
+                  Pixel Position
                   <input
+                    className="buy__input"
                     type="text"
-                    placeholder="id"
+                    placeholder="Select a number"
                     name="id"
                     onChange={this.handleChange}
                 
                   />
+                  <img className="buy__image" src={location} alt="A board of sqaures labeled one to twenty-five" />
                 </label>
-              </div>
-            </div>
-            <div className="card__buttons">
-              <button type="button" className="button card__buttons--cancel">
+                <div className="buy__buttons">
+              <button type="button" className="buy__button buy__buttons--cancel">
                 Cancel
               </button>
-              <button className="button card__buttons--add">+ Save</button>
+              <button className="buy__button buy__buttons--add">+ Buy</button>
             </div>
+              </div>
+            </div>
+            
           </form>
         )
     }

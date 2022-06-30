@@ -1,0 +1,38 @@
+
+
+.buy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__input {
+    margin-top: .5rem;
+
+    &--center {
+        align-items: center;
+    }
+}
+&__button {
+            border-radius: 0.25rem;
+            border: 2px solid green;
+            width: 6rem;
+            height: 2.5rem;      
+    }
+
+    &__image {
+        width: 10rem;
+        height: 10rem;
+        margin-top: 1rem;
+    }
+
+    &__buttons {
+        margin: 1rem;
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+
+        &--cancel {
+            border: 2px solid red;
+            }
+    }
+}
