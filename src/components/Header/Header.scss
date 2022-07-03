@@ -1,0 +1,35 @@
+
+
+.header {
+
+
+    &__inline {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    }
+
+    &__logo {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &__add {
+        border-radius: .5rem;
+        border: 3px solid blue;
+        width: 7rem;
+    }
+
+    &__buy {
+        border-radius: .5rem;
+        width: 7rem;
+        border: 3px solid red;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+    }
+   
+}

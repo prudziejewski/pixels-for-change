@@ -5,8 +5,9 @@ import Pixel from './components/Pixel/Pixel';
 import { Switch, BrowserRouter, Route, Redirect} from "react-router-dom";
 import CompanyDetails from './components/CompanyDetails/CompanyDetails';
 import Login from './components/Login/Login';
-import React, { useState } from 'react';
-
+import EditCompany from './components/EditCompany/EditCompany';
+import EditPixel from './components/EditPixel/EditPixel';
+import Header from './components/Header/Header';
 
 function App() {
   const [token, setToken] = useState();
@@ -22,12 +23,14 @@ function App() {
     <div className="App">
      
      <BrowserRouter>
-        
+        <Header />
        <Switch>
-         <Route exact path="/login" component={Login} />
+         <Route path="/login" component={Login} />
          <Route exact path="/" component={Home}/>
-         <Route exact path="/company/:id" component={CompanyDetails} />
-         {/* <Redirect exact path="/company" component={Home} /> */}
+         <Route  path="/company/:id" component={CompanyDetails} />
+         <Route path="/add" component={EditCompany} />
+         <Route path="/BuyPixel" component={EditPixel} />
+        
       </Switch>
     </BrowserRouter>
       
