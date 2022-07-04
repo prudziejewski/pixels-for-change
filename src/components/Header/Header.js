@@ -15,6 +15,11 @@ function Header() {
                         </Link>
                 </div>
                 <nav className="header__links">
+                     <Link to={"/Login"} > 
+                        <button className="header__login">
+                            <h3>Login</h3>
+                        </button>
+                    </Link>
                     <Link to={"/add"}>
                         <button className="header__add">
                             <h3>Register</h3>
@@ -25,6 +30,7 @@ function Header() {
                             <h3>Buy Pixel</h3>
                         </button>
                     </Link>
+                   
                 </nav>
              </div>
     </header>
