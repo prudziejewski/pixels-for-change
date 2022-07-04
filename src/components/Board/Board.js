@@ -2,16 +2,11 @@ import React from 'react'
 import Pixel from '../Pixel/Pixel'
 import axios from 'axios';
 import "./Board.scss"
-import { Link } from "react-router-dom";
-import App from '../../App';
-
 
 
 class Board extends React.Component {
     state = {
       results: [],
-    //   activeVideo: null,
-    //   hasFetchingError: false,
     };
   
      componentDidMount() {

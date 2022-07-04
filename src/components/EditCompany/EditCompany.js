@@ -48,6 +48,7 @@ class EditCompany extends Component {
           alert("Edited Successfully");
         });
     }
+    
 
     render() {
         return (
