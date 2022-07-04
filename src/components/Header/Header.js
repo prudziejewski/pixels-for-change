@@ -27,7 +27,12 @@ function Header() {
                     </Link>
                     <Link to={"/BuyPixel"} > 
                         <button className="header__buy">
-                            <h3>Buy Pixel</h3>
+                            <h3>Pick a Pixel</h3>
+                        </button>
+                    </Link>
+                    <Link to={"/checkout"} > 
+                        <button className="header__checkout">
+                            <h3>Checkout</h3>
                         </button>
                     </Link>
                    

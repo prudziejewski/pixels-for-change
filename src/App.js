@@ -6,6 +6,7 @@ import Login from './components/Login/Login';
 import EditCompany from './components/EditCompany/EditCompany';
 import EditPixel from './components/EditPixel/EditPixel';
 import Header from './components/Header/Header';
+import Checkout from './components/Checkout/Checkout';
 
 
 
@@ -25,6 +26,7 @@ function App() {
          <Route path="/company/:id" component={CompanyDetails} />
          <Route path="/add" component={EditCompany} />
          <Route path="/BuyPixel" component={EditPixel} />
+         <Route path="/checkout" component={Checkout} />
       </Switch>
     </BrowserRouter>
       
