@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import "./EditPixel.scss";
 import axios from "axios";
 import location from "../../Assets/images/pixel-location.jpg"
+import { Link, Redirect } from "react-router-dom";
 
 class EditPixel extends Component {
+   
+
   state = {
     id: "",
     color: "",
@@ -27,6 +30,8 @@ class EditPixel extends Component {
         charityid: this.state.charityid,
       };
 
+      
+
       axios
         // update information to backend
         .put(
@@ -43,8 +48,10 @@ class EditPixel extends Component {
           })
         )
         .then((response) => {
-          alert("Edited Successfully");
+         alert("Edited Successfully");
+       
         });
+        <Redirect to={"/checkout"}></Redirect>
     }
 
     render() {
@@ -105,7 +112,7 @@ class EditPixel extends Component {
               <button type="button" className="buy__button buy__buttons--cancel">
                 Cancel
               </button>
-              <button className="buy__button buy__buttons--add">+ Buy</button>
+             <button className="buy__button buy__buttons--add">+ Buy</button> 
             </div>
               </div>
             </div>
