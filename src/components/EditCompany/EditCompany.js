@@ -6,9 +6,9 @@ class EditCompany extends Component {
   state = {
     name: "",
     url: "",
-    fundingGoal: "", 
+    description: "", 
     charityid: "",
-    raisedMoney: "",
+    message: "",
   };
 
   handleChange = (e) => {
@@ -23,9 +23,9 @@ class EditCompany extends Component {
       const newCompany = {
         name: this.state.name,
         url: this.state.url,
-        fundingGoal: this.state.fundingGoal, 
+        description: this.state.description, 
         charityid: this.state.charityid,
-        raisedMoney: this.state.raisedMoney,
+        message: this.state.message,
       };
 
       axios
@@ -39,9 +39,9 @@ class EditCompany extends Component {
           this.setState({
             name: this.state.name,
             url: this.state.url,
-            fundingGoal: this.state.fundingGoal, 
+            description: this.state.description, 
             charityid: this.state.charityid,
-            raisedMoney: this.state.raisedMoney,
+            message: this.state.message,
           })
         )
         .then((response) => {
@@ -52,79 +52,82 @@ class EditCompany extends Component {
 
     render() {
         return (
-            <form className="card" onSubmit={this.submitForm}>
-            <div className="card__title">
-              <h1 className="card__title-text">Register Your Company</h1>
-            </div>
-            <div className="card__forms">
-              <div className="edit">
-                <h2 className="edit__title">Company Details</h2>
-                <label className="edit__input-label label">
-                    Your Company Name
-                  <input
-                    className="edit__input"
-                    type="text"
-                    placeholder="Company Name"
-                    name="name"
-                    onChange={this.handleChange}
-                    
-                  /> 
-                </label>
-                <label className="edit__input-label label">
-                  Link to Your Website
-                  <input
-                    className="edit__input"
-                    type="text"
-                    placeholder="Url"
-                    name="url"
-                    onChange={this.handleChange}
-                    
-                  />
-                </label>
-                <label className="edit__input-label label">
-                 What is your Funding Goal 
-                  <input
-                    className="edit__input"
-                    type="text"
-                    placeholder="Funding Goals"
-                    name="fundingGoal"
-                    onChange={this.handleChange}
-                    
-                  />
-                </label>
-                <label className="edit__input-label label">
-                  Charity Id
-                  <input
-                    className="edit__input"
-                    type="text"
-                    placeholder="charityid"
-                    name="charityid"
-                    onChange={this.handleChange}
+            <div className="card">
+                <form className="card__form" onSubmit={this.submitForm}>
+                <div className="card__title">
+                  <h1 className="card__title-text">Register Your Company</h1>
+                </div>
+                <div className="card__forms">
+                  <div className="edit">
+                    <h2 className="edit__title">Company Details</h2> 
+                    <label className="edit__input-label label">
+                        Your Company Name
+                      <input
+                        className="edit__input"
+                        type="text"
+                        placeholder="Company Name"
+                        name="name"
+                        onChange={this.handleChange}
                 
-                  />
-                </label>
-                <label className="dit__input-label label">
-                  How much money have you Raised Money
-                  <input
-                    className="edit__input"
-                    type="text"
-                    placeholder="Raised Money"
-                    name="raisedMoney"
-                    onChange={this.handleChange}
+                      />
+                    </label>
+                    <label className="edit__input-label label">
+                      Link to Your Website
+                      <input
+                        className="edit__input"
+                        type="text"
+                        placeholder="Url"
+                        name="url"
+                        onChange={this.handleChange}
                 
-                  />
-                </label>
-              <div className="edit__buttons">
-              <button type="button" className="button edit__buttons--cancel">
-                Cancel
-              </button>
-              <button className="button edit__buttons--add">+ Save</button>
+                      />
+                    </label>
+                    <label className="edit__input-label label">
+                      Charity Id
+                      <input
+                        className="edit__input"
+                        type="text"
+                        placeholder="Create a charity id"
+                        name="charityid"
+                        onChange={this.handleChange}
+                
+                      />
+                    </label>
+                    <label className="edit__input-label label">
+                     Please provide a description of your company
+                      <input
+                        className="edit__input"
+                        type="text"
+                        placeholder="Description"
+                        name="description"
+                        onChange={this.handleChange}
+                
+                      />
+                    </label>
+                   
+                    <label className="edit__input-label label">
+                      Provide a message you would like to share 
+                      <input
+                        className="edit__input"
+                        type="text"
+                        placeholder="Provide a message or CTA"
+                        name="message"
+                        onChange={this.handleChange}
+                
+                      />
+                    </label>
+                  <div className="edit__buttons">
+                  <button type="button" className="button edit__buttons--cancel">
+                    Cancel
+                  </button>
+                  <button className="button edit__buttons--add">Save</button>
+                </div>
+                
+                  </div>
+                </div>
+                
+                          </form>
             </div>
-              
-              </div>
-            </div>
-            
-          </form>
         )
     }
 

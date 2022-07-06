@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Checkout.scss";
-import axios from "axios";
+
 
 
 
@@ -14,7 +14,7 @@ const ProductDisplay = () => (
         <img
           className="checkout__img"
           src="https://images.unsplash.com/photo-1634320714682-ae8b9c9cee60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          alt="The cover of Stubborn Attachments"
+          alt="Pixelized photo of the Mona Lisa"
         />
         <div className="checkout__description">
         <h3 className="checkout__text">A pixel that will help advertise your company while, providing back to casues that matter</h3>

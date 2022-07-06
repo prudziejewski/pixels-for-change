@@ -6,7 +6,6 @@ import { Link, Redirect } from "react-router-dom";
 
 class EditPixel extends Component {
    
-
   state = {
     id: "",
     color: "",
@@ -56,68 +55,70 @@ class EditPixel extends Component {
 
     render() {
         return (
-            <form className="card" onSubmit={this.submitForm}>
-            <div className="card__title">
-              <h1 className="card__title-text">Edit Pixel</h1>
-            </div>
-            <div className="card__forms">
-              <div className="buy">
-                <h2 className="buy__title">Company Details</h2>
-                <label className="buy__input-label label">
-                    Company Name
-                  <input
-                    className="buy__input"
-                    type="text"
-                    placeholder="Company Name"
-                    name="text"
-                    onChange={this.handleChange}
-                    
-                  /> 
-                </label>
-                <label className="buy__input-label label">
-                  Color of Pixel
-                  <input
-                    className="buy__input"
-                    type="text"
-                    placeholder="Color of Pixel"
-                    name="color"
-                    onChange={this.handleChange}
-                    
-                  />
-                </label>
-                <label className="buy__input-label label">
-                  Charity id 
-                  <input
-                    className="buy__input"
-                    type="text"
-                    placeholder="Charity Id"
-                    name="charityid"
-                    onChange={this.handleChange}
-                    
-                  />
-                </label>
-                <label className="buy__input-label label buy__input--center">
-                  Pixel Position
-                  <input
-                    className="buy__input"
-                    type="text"
-                    placeholder="Select a number"
-                    name="id"
-                    onChange={this.handleChange}
-                
-                  />
-                  <img className="buy__image" src={location} alt="A board of sqaures labeled one to twenty-five" />
-                </label>
-                <div className="buy__buttons">
-              <button type="button" className="buy__button buy__buttons--cancel">
-                Cancel
-              </button>
-             <button className="buy__button buy__buttons--add">+ Buy</button> 
-            </div>
-              </div>
-            </div>
             
-          </form>
+            <div className="card">
+                <form className="card__container" onSubmit={this.submitForm}>
+                <div className="card__title">
+                  <h1 className="card__title-text">Pick a Pixel</h1>
+                </div>
+                <div className="card__forms">
+                  <div className="buy">
+                    <label className="buy__input-label label">
+                        Company Name
+                      <input
+                        className="buy__input"
+                        type="text"
+                        placeholder="Company Name"
+                        name="text"
+                        onChange={this.handleChange}
+                
+                      />
+                    </label>
+                    <label className="buy__input-label label">
+                      Color of Pixel
+                      <input
+                        className="buy__input"
+                        type="text"
+                        placeholder="Color of Pixel"
+                        name="color"
+                        onChange={this.handleChange}
+                
+                      />
+                    </label>
+                    <label className="buy__input-label label">
+                      Charity id
+                      <input
+                        className="buy__input"
+                        type="text"
+                        placeholder="Match Charity id from register page"
+                        name="charityid"
+                        onChange={this.handleChange}
+                
+                      />
+                    </label>
+                    <label className="buy__input-label label buy__input--center">
+                      Pixel Position
+                      <input
+                        className="buy__input"
+                        type="text"
+                        placeholder="Select a number from 1-25"
+                        name="id"
+                        onChange={this.handleChange}
+                
+                      />
+                      <img className="buy__image" src={location} alt="A board of sqaures labeled one to twenty-five" />
+                    </label>
+                    <div className="buy__buttons">
+                  <button type="button" className="buy__button buy__buttons--cancel">
+                    Cancel
+                  </button>
+                 <button className="buy__button buy__buttons--add">Submit</button>
+                </div>
+                  </div>
+                </div>
+                
+            </form>
+            </div>
         )
     }
 
