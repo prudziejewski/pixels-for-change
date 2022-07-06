@@ -1,0 +1,19 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixin.scss" as *;
+@use "../../styles/reset.scss" as *;
+
+.pixel {
+  width: 6rem;
+  height: 6rem;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  &__link {
+    text-decoration: none;
+  }
+}

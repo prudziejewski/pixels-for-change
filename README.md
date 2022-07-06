@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Pixels For Change 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pixels for change is a fundraising platform where companies buy advertisement space “Pixels” with all proceeds going to charity
 
-## Available Scripts
 
-In the project directory, you can run:
+## Acknowledgements
 
-### `npm start`
+ - [Stripe Documentation](https://stripe.com/docs)
+ 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Client:** HTML5, CSS3, SASS, Javascript, React, React Router
 
-### `npm test`
+**Server:** Node, Express, Stripe
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Run Locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone the project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  git clone https://github.com/prudziejewski/pixels-for-change
+  git clone https://github.com/prudziejewski/pixels-for-change-API
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Go to the project directory
 
-### `npm run eject`
+```bash
+  cd pixels-for-change
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Install dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Start the server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  npm run start
+```
 
-## Learn More
+## Environment Variables
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To run this project, you will need to add the following environment variables to your .env file
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`REACT_APP_API_KEY`
 
-### Code Splitting
+To generate this key you will have to create an account on stripe, then go into the developers tab and then click API key. There will be secret key copy and paste that key into the .env and set REACT_APP_API_KEY = to the secret key. You will now have access to the checkout function of the project  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Roadmap
 
-### Analyzing the Bundle Size
+- Refactor website logic to have cleaner functionality, and to allow multiple pixel purchases  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Create larger pixel board with the goal being 1 million pixels 
 
-### Making a Progressive Web App
+- Add database to store information instead of JSON
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Add gamification to the project to increase daily traffic 
 
-### Advanced Configuration
+- Add functionality to delete companies pixels with a donation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

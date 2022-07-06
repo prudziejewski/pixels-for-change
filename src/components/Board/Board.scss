@@ -1,0 +1,21 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixin.scss" as *;
+@use "../../styles/reset.scss" as *;
+
+.board {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include tablet {
+    width: 30rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
