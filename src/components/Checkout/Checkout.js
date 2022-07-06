@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Checkout.scss";
 
-
-
-
 const ProductDisplay = () => (
-  
-
-    
   <div className="wrapper">
     <section>
       <div className="checkout">
@@ -17,23 +11,25 @@ const ProductDisplay = () => (
           alt="Pixelized photo of the Mona Lisa"
         />
         <div className="checkout__description">
-        <h3 className="checkout__text">A pixel that will help advertise your company while, providing back to casues that matter</h3>
-        <h5 className="checkout__price">$1.00</h5>
+          <h3 className="checkout__text">
+            A pixel that will help advertise your company while, providing back
+            to casues that matter
+          </h3>
+          <h5 className="checkout__price">$1.00</h5>
         </div>
-     
-      <form action="http://localhost:8020/create-checkout-session" method="POST">
-        <button className="checkout__button" type="submit">
-          Checkout
-        </button>
-         
-      </form>
+        {/* sends a Post request to the server which creates the stripe checkout session */}
+        <form
+          action="http://localhost:8020/create-checkout-session"
+          method="POST"
+        >
+          <button className="checkout__button" type="submit">
+            Checkout
+          </button>
+        </form>
       </div>
     </section>
   </div>
-  
-)
-
-
+);
 
 const Message = ({ message }) => (
   <section>
@@ -44,8 +40,6 @@ const Message = ({ message }) => (
 export default function Checkout() {
   const [message, setMessage] = useState("");
 
-
-  
   useEffect(() => {
     // Check to see if this is a redirect back from Checkout
     const query = new URLSearchParams(window.location.search);
@@ -61,9 +55,5 @@ export default function Checkout() {
     }
   }, []);
 
-  return message ? (
-    <Message message={message} />
-  ) : (
-    <ProductDisplay />
-  );
+  return message ? <Message message={message} /> : <ProductDisplay />;
 }
