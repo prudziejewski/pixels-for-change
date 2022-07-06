@@ -1,47 +1,62 @@
-
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixin.scss" as *;
+@use "../../styles/reset.scss" as *;
 
 .header {
-
-
-    &__inline {
+  &__inline {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    }
+  }
 
-    &__logo {
-        width: 5rem;
-        height: 5rem;
-    }
+  &__logo {
+    width: 5rem;
+    height: 5rem;
+  }
 
-    &__add {
-        border-radius: .5rem;
-        border: 3px solid blue;
-        width: 7rem;
-    }
+  &__add {
+    border-radius: 0.5rem;
+    border: 3px solid blue;
+    width: 4rem;
 
-    &__buy {
-        border-radius: .5rem;
-        width: 7rem;
-        border: 3px solid red;
+    @include tablet {
+      width: 7rem;
     }
+  }
 
-    &__login {
-        border-radius: .5rem;
-        width: 7rem;
-        border: 3px solid yellow;
-    }
+  &__buy {
+    border-radius: 0.5rem;
+    width: 4rem;
+    border: 3px solid red;
 
-    &__checkout {
-        border-radius: .5rem;
-        width: 7rem;
-        border: 3px solid green;
+    @include tablet {
+      width: 7rem;
     }
+  }
 
-    &__links {
-        display: flex;
-        justify-content: space-between;
-        width: 35%;
+  &__login {
+    border-radius: 0.5rem;
+    width: 4rem;
+    border: 3px solid yellow;
+
+    @include tablet {
+      width: 7rem;
     }
-   
+  }
+
+  &__checkout {
+    border-radius: 0.5rem;
+    width: 4rem;
+    border: 3px solid green;
+    overflow: hidden;
+
+    @include tablet {
+      width: 7rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+  }
 }
