@@ -10,12 +10,12 @@ function Header() {
     <header className="header">
             <div className="header__inline">
                 <div className="header__logo">
-                    <Link to={"/"}>
+                    <Link to="/">
                         <img className="header__logo" src={LogoAlt} alt="Pixels for change logo" />
                         </Link>
                 </div>
                 <nav className="header__links">
-                     <Link to={"/Login"} > 
+                     <Link to="/login" > 
                         <button className="header__login">
                             <h3>Login</h3>
                         </button>

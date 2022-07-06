@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import "./Login.scss";
 
 const Login = () => {
     const userRef = useRef();
@@ -41,52 +42,52 @@ const Login = () => {
     return (
         <>
         {success ? (
-            <section>
+            <section className="success" >
                 <h1>You are logged in!</h1>
-                <p>
+                <p>Where would you like to go?</p>
                 <Link to={"/"}>
                         <h2>Visit the Pixel Board</h2>
                 </Link>
                 <Link to={"/BuyPixel"}>
                         <h2>Buy a Pixel</h2>
                 </Link>
-                
-                </p>
+                <Link to={"/add"}>
+                        <h2>Register your company</h2>
+                </Link>
             </section>
         ) : (
-        <section>
-<p ref={errRef} className={errMsg ? "errmsg" : "offscreen"}></p>
-<h1>Sign In</h1>
-<form onSubmit={handleSubmit}>
-    <label htmlFor="username">Username:</label>
-    <input 
-    type="text"
-    id='username' 
-    ref={userRef}
-    autoComplete="off"
-    onChange={(e) => setUser(e.target.value)}
-    value={user}
-    required
-    />
-    <label htmlFor="password">Password:</label>
-    <input 
-    type="password"
-    id='password' 
-    onChange={(e) => setPwd(e.target.value)}
-    value={pwd}
-    required
-    />
-    <button>Sign In</button>
-</form>
-{/* <p>
-    Need an Account?<br />
-    <span className='line'> */}
-        {/* put router link here*/}
-        {/* <a href="#">Sign Up</a>
-    </span>
-</p> */}
-
-        </section>
+<div className="wrapper">
+    <section className='login'>
+    <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"}></p>
+    <h1 className='login__text'>Login</h1>
+    <form className="login__form" onSubmit={handleSubmit}>
+        <div className="login__actions">
+            <input
+            className='login__input'
+            placeholder='Username'
+            type="text"
+            id='username'
+            ref={userRef}
+            autoComplete="off"
+            onChange={(e) => setUser(e.target.value)}
+            value={user}
+            required
+            />
+            <input
+            className='login__input'
+            placeholder='Password'
+            type="password"
+            id='password'
+            onChange={(e) => setPwd(e.target.value)}
+            value={pwd}
+            required
+            />
+            <button className='login__button'>Login</button>
+        </div>
+    </form>
+    
+    </section>
+</div>
         )}
         </>
     )
@@ -95,40 +96,3 @@ const Login = () => {
 export default Login;
 
 
-// Login.propTypes = {
-//     setToken: PropTypes.func.isRequired
-// }
-
-// axios
-//       .get(`http://localhost:8020/company/login`)
-//       .then(data => data.json())
-
-// export default function Login({ setToken }) {
-//     const [username, setUserName] = useState();
-//     const [password, setPassword] = useState();
-
-//     const handleSubmit = async e => {
-//         e.preventDefault();
-//         const token = await Login({
-//           username,
-//           password
-//         });
-//         setToken(token);
-//       }
-
-//     return(
-//     <form onSubmit={handleSubmit}>
-//       <label>
-//         <p>Username</p>
-//         <input type="text" onChange={e => setUserName(e.target.value)}/>
-//       </label>
-//       <label>
-//         <p>Password</p>
-//         <input type="password"  onChange={e => setPassword(e.target.value)}/>
-//       </label>
-//       <div>
-//         <button  type="submit">Submit</button>
-//       </div>
-//     </form>
-//   )
-// }
