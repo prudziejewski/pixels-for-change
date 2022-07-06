@@ -14,6 +14,15 @@ Pixels for change is a fundraising platform where companies buy advertisement sp
 
 **Server:** Node, Express, Stripe
 
+## Dependencies
+
+- react
+
+- react-router-dom (V5.3)
+
+- axios
+
+- sass
 
 ## Run Locally
 
@@ -61,6 +70,8 @@ To generate this key you will have to create an account on stripe, then go into 
 - Add gamification to the project to increase daily traffic 
 
 - Add functionality to delete companies pixels with a donation
+
+
 
 
 
